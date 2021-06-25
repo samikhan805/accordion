@@ -1,0 +1,54 @@
+* {
+  font-family: 'Ubuntu', Sans-Serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  /*display: flex;
+  justify-content: center;
+  align-items: center;*/
+  height: 100vh;
+  background: #9fd3cb;
+}
+.accordion {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+.accordion .contentBox {
+  margin: 0 auto 1rem;
+  width: 310px;
+}
+.accordion .contentBox .label {
+  background: #1abc9c;
+  padding: 0.6rem;
+  color: #fff;
+  font-weight: 600;
+  position: relative;
+  transition: 0.45s;
+}
+.contentBox.active .label {
+  background: #087f68;
+}
+.label::after {
+  position: absolute;
+  content: '+';
+  right: 5%;
+}
+.accordion .contentBox.active .label::after {
+  content: '-';
+}
+.accordion .contentBox .content {
+  height: 0;
+  overflow: hidden;
+  overflow-y: auto;
+  background: #fff;
+  text-align: justify;
+  transition: 0.45s;
+}
+
+.contentBox.active .content {
+  height: 110px;
+  padding: 0.5rem;
+}
